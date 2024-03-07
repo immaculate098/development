@@ -7,6 +7,40 @@
 
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" link="style.css" />
+
+
+
+    <style>
+      .gallery-container {
+        perspective: 1000px;
+      }
+  
+      .gallery-image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 5px;
+        transition: transform 0.2s ease;
+        animation: flipImage 3s forwards infinite;
+      }
+  
+      .gallery-image:hover {
+        transform: rotateY(180deg);
+      }
+      @keyframes flipImage {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(180deg);
+      }
+    }
+    </style>
+
+
+
+
   </head>
   <body
     style="
@@ -98,8 +132,7 @@
 
 
 
-
-    <div class="container">
+<div class="container">
       <div class="gallery-container">
         <div class="row">
           <div class="col-4" style="text-align: center; margin-top: 20px">
@@ -108,8 +141,8 @@
               alt="Image 1"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -122,8 +155,8 @@
               alt="Image 2"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -136,8 +169,8 @@
               alt="Image 3"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -152,8 +185,8 @@
               alt="Image 4"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -166,8 +199,8 @@
               alt="Image 5"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -180,8 +213,8 @@
               alt="Image 6"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -196,8 +229,8 @@
               alt="Image 7"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -210,8 +243,8 @@
               alt="Image 8"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -224,8 +257,8 @@
               alt="Image 9"
               class="gallery-image"
               style="
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin: 5px;
@@ -234,7 +267,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+
+
+
+
+    
 
     <footer class="footer bg-dark text-light py-3">
       <div class="container text-center">
@@ -244,5 +282,17 @@
 
     <script src="js/bootstrap.bundle.js"></script>
     <script src="javascript/script.js"></script>
+    <!-- <script>
+      function switchImages() {
+        const imageRow = document.getElementById('imageRow');
+        const images = Array.from(imageRow.children);
+    
+        // Move the first image to the end of the row
+        imageRow.appendChild(images.shift());
+      }
+    
+      // Set an interval to switch images every 5 seconds
+      setInterval(switchImages, 5000);
+    </script> -->
   </body>
 </html>
